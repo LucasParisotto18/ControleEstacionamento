@@ -1,4 +1,4 @@
-namespace GerenciaEstacionamento
+namespace GerenciaEstacionamento.Model
 {
     internal static class Program
     {

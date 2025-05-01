@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GerenciaEstacionamento
+namespace GerenciaEstacionamento.Model
 {
     internal class TabelaPrecos
     {
@@ -18,13 +18,14 @@ namespace GerenciaEstacionamento
         {
         }
 
-        public void setId (int id)
+        public void setId(int id)
         {
             this.id = id;
         }
 
-        public int getId() { 
-         return id;
+        public int getId()
+        {
+            return id;
         }
 
         public void setDataInicioVigencia(DateTime dataInicioVigencia)
@@ -42,16 +43,17 @@ namespace GerenciaEstacionamento
             this.dataFinalVigencia = dataFinalVigencia;
         }
 
-        public DateTime getDataFinalVigencia (DateTime dataFinalVigencia)
+        public DateTime getDataFinalVigencia(DateTime dataFinalVigencia)
         {
-            return dataFinalVigencia;   
+            return dataFinalVigencia;
         }
 
         public void setCustoHoraInicial(decimal custoHoraInicial)
         {
-          this.custoHoraInicial = custoHoraInicial;
+            this.custoHoraInicial = custoHoraInicial;
         }
-        public decimal getCustoHoraInicial() { 
+        public decimal getCustoHoraInicial()
+        {
             return custoHoraInicial;
         }
 
