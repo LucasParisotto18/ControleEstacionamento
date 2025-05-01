@@ -1,0 +1,16 @@
+C:\Users\lucas\Projetos\ProjetoBenner\GerenciaEstacionamento\GerenciaEstacionamento\bin\Debug\net8.0-windows\GerenciaEstacionamento.exe
+C:\Users\lucas\Projetos\ProjetoBenner\GerenciaEstacionamento\GerenciaEstacionamento\bin\Debug\net8.0-windows\GerenciaEstacionamento.deps.json
+C:\Users\lucas\Projetos\ProjetoBenner\GerenciaEstacionamento\GerenciaEstacionamento\bin\Debug\net8.0-windows\GerenciaEstacionamento.runtimeconfig.json
+C:\Users\lucas\Projetos\ProjetoBenner\GerenciaEstacionamento\GerenciaEstacionamento\bin\Debug\net8.0-windows\GerenciaEstacionamento.dll
+C:\Users\lucas\Projetos\ProjetoBenner\GerenciaEstacionamento\GerenciaEstacionamento\bin\Debug\net8.0-windows\GerenciaEstacionamento.pdb
+C:\Users\lucas\Projetos\ProjetoBenner\GerenciaEstacionamento\GerenciaEstacionamento\obj\Debug\net8.0-windows\GerenciaEstacionamento.Form1.resources
+C:\Users\lucas\Projetos\ProjetoBenner\GerenciaEstacionamento\GerenciaEstacionamento\obj\Debug\net8.0-windows\GerenciaEstacionamento.csproj.GenerateResource.cache
+C:\Users\lucas\Projetos\ProjetoBenner\GerenciaEstacionamento\GerenciaEstacionamento\obj\Debug\net8.0-windows\GerenciaEstacionamento.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lucas\Projetos\ProjetoBenner\GerenciaEstacionamento\GerenciaEstacionamento\obj\Debug\net8.0-windows\GerenciaEstacionamento.AssemblyInfoInputs.cache
+C:\Users\lucas\Projetos\ProjetoBenner\GerenciaEstacionamento\GerenciaEstacionamento\obj\Debug\net8.0-windows\GerenciaEstacionamento.AssemblyInfo.cs
+C:\Users\lucas\Projetos\ProjetoBenner\GerenciaEstacionamento\GerenciaEstacionamento\obj\Debug\net8.0-windows\GerenciaEstacionamento.csproj.CoreCompileInputs.cache
+C:\Users\lucas\Projetos\ProjetoBenner\GerenciaEstacionamento\GerenciaEstacionamento\obj\Debug\net8.0-windows\GerenciaEstacionamento.dll
+C:\Users\lucas\Projetos\ProjetoBenner\GerenciaEstacionamento\GerenciaEstacionamento\obj\Debug\net8.0-windows\refint\GerenciaEstacionamento.dll
+C:\Users\lucas\Projetos\ProjetoBenner\GerenciaEstacionamento\GerenciaEstacionamento\obj\Debug\net8.0-windows\GerenciaEstacionamento.pdb
+C:\Users\lucas\Projetos\ProjetoBenner\GerenciaEstacionamento\GerenciaEstacionamento\obj\Debug\net8.0-windows\GerenciaEstacionamento.genruntimeconfig.cache
+C:\Users\lucas\Projetos\ProjetoBenner\GerenciaEstacionamento\GerenciaEstacionamento\obj\Debug\net8.0-windows\ref\GerenciaEstacionamento.dll
