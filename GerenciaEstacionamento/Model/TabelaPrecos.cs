@@ -43,7 +43,7 @@ namespace GerenciaEstacionamento.Model
             this.dataFinalVigencia = dataFinalVigencia;
         }
 
-        public DateTime getDataFinalVigencia(DateTime dataFinalVigencia)
+        public DateTime getDataFinalVigencia()
         {
             return dataFinalVigencia;
         }
