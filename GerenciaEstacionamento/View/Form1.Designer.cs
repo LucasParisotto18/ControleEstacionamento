@@ -30,6 +30,8 @@
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             panel1 = new Panel();
+            ArqTabelaPreco = new Button();
+            ArqEstacionamento = new Button();
             dataGridView1 = new DataGridView();
             ID = new DataGridViewTextBoxColumn();
             Placa = new DataGridViewTextBoxColumn();
@@ -43,6 +45,7 @@
             LabelEstacionamento = new Label();
             ButtonRSaida = new Button();
             ButtonREntrada = new Button();
+            openFileDialog1 = new OpenFileDialog();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -50,6 +53,8 @@
             // panel1
             // 
             panel1.AutoSize = true;
+            panel1.Controls.Add(ArqTabelaPreco);
+            panel1.Controls.Add(ArqEstacionamento);
             panel1.Controls.Add(dataGridView1);
             panel1.Controls.Add(LabelBemGuardado);
             panel1.Controls.Add(LabelEstacionamento);
@@ -59,6 +64,26 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1173, 445);
             panel1.TabIndex = 0;
+            // 
+            // ArqTabelaPreco
+            // 
+            ArqTabelaPreco.Location = new Point(22, 121);
+            ArqTabelaPreco.Name = "ArqTabelaPreco";
+            ArqTabelaPreco.Size = new Size(335, 29);
+            ArqTabelaPreco.TabIndex = 6;
+            ArqTabelaPreco.Text = "Selecionar Arquivo de Tabelas de Preço";
+            ArqTabelaPreco.UseVisualStyleBackColor = true;
+            ArqTabelaPreco.Click += ArqTabelaPreco_Click;
+            // 
+            // ArqEstacionamento
+            // 
+            ArqEstacionamento.Location = new Point(22, 89);
+            ArqEstacionamento.Name = "ArqEstacionamento";
+            ArqEstacionamento.Size = new Size(335, 29);
+            ArqEstacionamento.TabIndex = 5;
+            ArqEstacionamento.Text = "Selecionar Arquivo Estacionamento";
+            ArqEstacionamento.UseVisualStyleBackColor = true;
+            ArqEstacionamento.Click += button1_Click_1;
             // 
             // dataGridView1
             // 
@@ -75,7 +100,7 @@
             dataGridView1.Location = new Point(22, 160);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1121, 273);
+            dataGridView1.Size = new Size(1121, 278);
             dataGridView1.TabIndex = 4;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -140,7 +165,7 @@
             LabelBemGuardado.AutoSize = true;
             LabelBemGuardado.Font = new Font("Segoe UI Historic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LabelBemGuardado.ForeColor = SystemColors.MenuHighlight;
-            LabelBemGuardado.Location = new Point(220, 65);
+            LabelBemGuardado.Location = new Point(42, 41);
             LabelBemGuardado.Name = "LabelBemGuardado";
             LabelBemGuardado.Size = new Size(315, 41);
             LabelBemGuardado.TabIndex = 3;
@@ -151,7 +176,7 @@
             // 
             LabelEstacionamento.AutoSize = true;
             LabelEstacionamento.Font = new Font("Segoe UI Historic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            LabelEstacionamento.Location = new Point(220, 37);
+            LabelEstacionamento.Location = new Point(19, 10);
             LabelEstacionamento.Name = "LabelEstacionamento";
             LabelEstacionamento.Size = new Size(191, 31);
             LabelEstacionamento.TabIndex = 2;
@@ -161,7 +186,7 @@
             // ButtonRSaida
             // 
             ButtonRSaida.ForeColor = Color.Red;
-            ButtonRSaida.Location = new Point(960, 46);
+            ButtonRSaida.Location = new Point(960, 89);
             ButtonRSaida.Name = "ButtonRSaida";
             ButtonRSaida.Size = new Size(183, 50);
             ButtonRSaida.TabIndex = 1;
@@ -171,13 +196,17 @@
             // ButtonREntrada
             // 
             ButtonREntrada.ForeColor = Color.MediumSeaGreen;
-            ButtonREntrada.Location = new Point(735, 46);
+            ButtonREntrada.Location = new Point(960, 33);
             ButtonREntrada.Name = "ButtonREntrada";
-            ButtonREntrada.Size = new Size(193, 50);
+            ButtonREntrada.Size = new Size(183, 50);
             ButtonREntrada.TabIndex = 0;
             ButtonREntrada.Text = "Registrar Entrada";
             ButtonREntrada.UseVisualStyleBackColor = true;
             ButtonREntrada.Click += button1_Click;
+            // 
+            // openFileDialog1
+            // 
+            openFileDialog1.FileName = "openFileDialog1";
             // 
             // Form1
             // 
@@ -210,5 +239,8 @@
         private DataGridViewTextBoxColumn TempoEstacionado;
         private DataGridViewTextBoxColumn valorTotal;
         private DataGridViewTextBoxColumn ValorPagar;
+        private Button ArqTabelaPreco;
+        private Button ArqEstacionamento;
+        private OpenFileDialog openFileDialog1;
     }
 }

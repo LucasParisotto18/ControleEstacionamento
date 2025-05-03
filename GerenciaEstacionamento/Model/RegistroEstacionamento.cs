@@ -112,8 +112,5 @@ namespace GerenciaEstacionamento.Model
             return this.totalAPagar;
         }
 
-
-
-
     }
 }

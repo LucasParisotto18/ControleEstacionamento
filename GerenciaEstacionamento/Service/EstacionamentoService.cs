@@ -14,5 +14,14 @@ namespace GerenciaEstacionamento.Service
 
 
 
+        public int getUltimoID(List<RegistroEstacionamento> listaRegistroEstacionamento)
+        {
+            if (listaRegistroEstacionamento.Count == 0)
+            {
+                return 0;
+            }
+            return listaRegistroEstacionamento.Last().getId();
+        }
+
     }
 }

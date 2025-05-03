@@ -30,7 +30,7 @@ namespace GerenciaEstacionamento.Controller
                         registroEstacionamento.setId(int.Parse(dados[0]));
                         registroEstacionamento.setPlacaCarro(dados[1]);
                         registroEstacionamento.setDataEntrada(DateTime.Parse(dados[2]));
-                        if (dados[3].Equals(null))
+                        if (string.IsNullOrEmpty(dados[3]))
                         {
                             registroEstacionamento.setDataSaida(null);
                         }
@@ -39,7 +39,7 @@ namespace GerenciaEstacionamento.Controller
                             registroEstacionamento.setDataSaida(DateTime.Parse(dados[3]));
                         }
                         registroEstacionamento.setIsEstacionado(bool.Parse(dados[4]));
-                        if (dados[5].Equals(null))
+                        if (string.IsNullOrEmpty(dados[5]))
                         {
                             registroEstacionamento.setTempoEstacionado(null);
                         }
@@ -47,7 +47,7 @@ namespace GerenciaEstacionamento.Controller
                         {
                             registroEstacionamento.setTempoEstacionado(TimeOnly.Parse(dados[5]));
                         }
-                        if (dados[6].Equals(null))
+                        if (string.IsNullOrEmpty(dados[6]))
                         {
                             registroEstacionamento.setValorCobrado(null);
                         }
@@ -55,7 +55,7 @@ namespace GerenciaEstacionamento.Controller
                         {
                             registroEstacionamento.setValorCobrado(decimal.Parse(dados[6]));
                         }
-                        if (dados[7].Equals(null))
+                        if (string.IsNullOrEmpty(dados[7]))
                         {
                             registroEstacionamento.setTotalAPagar(null);
                         }
@@ -113,7 +113,7 @@ namespace GerenciaEstacionamento.Controller
                     foreach (RegistroEstacionamento registroAtual in listaRegistroEstacionamento)
                     {
                         sw.WriteLine($"{registroAtual.getId()};{registroAtual.getPlacaCarro()};{registroAtual.getDataEntrada()};" +
-                            $"{registroAtual.getDataSaida()};{registroAtual.getIsEstacionado()};{registroAtual.getTempoEstacionado};" +
+                            $"{registroAtual.getDataSaida()};{registroAtual.getIsEstacionado()};{registroAtual.getTempoEstacionado()};" +
                             $"{registroAtual.getValorCobrado()};{registroAtual.getTotalAPagar()}");
                     }
                 }
