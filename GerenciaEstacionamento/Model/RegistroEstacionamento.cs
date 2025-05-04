@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace GerenciaEstacionamento.Model
 {
-    internal class RegistroEstacionamento
+    public class RegistroEstacionamento
     {
         private int id;
-        private String placaCarro;  
-        private DateTime dataEntrada;
+        private String placaCarro { get; set; } 
+        private DateTime dataEntrada { get; set; } 
         private DateTime? dataSaida;
         private bool isEstacionado;
         private TimeOnly? tempoEstacionado;
@@ -112,5 +112,9 @@ namespace GerenciaEstacionamento.Model
             return this.totalAPagar;
         }
 
+        public override string ToString()
+        {
+            return $"ID: {id}, Placa: {placaCarro}, Data Entrada: {dataEntrada}, Data Saida: {dataSaida}, Estacionado: {isEstacionado}, Tempo Estacionado: {tempoEstacionado}, Valor Cobrado: {valorCobrado}, Total a Pagar: {totalAPagar}";
+        }
     }
 }

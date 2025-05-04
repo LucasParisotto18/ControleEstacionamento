@@ -41,6 +41,8 @@ namespace GerenciaEstacionamento.View
             InitializeComponent();
         }
 
+
+
         private void button1_Click(object sender, EventArgs e)
         {
             setPlacaCarro(textBoxPlaca.Text);
@@ -75,6 +77,11 @@ namespace GerenciaEstacionamento.View
         {
 
             this.Close();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            textBoxData.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
         }
     }
 }

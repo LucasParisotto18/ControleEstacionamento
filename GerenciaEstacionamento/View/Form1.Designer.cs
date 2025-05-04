@@ -28,24 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle14 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle15 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle13 = new DataGridViewCellStyle();
             panel1 = new Panel();
             ArqTabelaPreco = new Button();
             ArqEstacionamento = new Button();
             dataGridView1 = new DataGridView();
             ID = new DataGridViewTextBoxColumn();
-            Placa = new DataGridViewTextBoxColumn();
-            HoraEntrada = new DataGridViewTextBoxColumn();
-            HoraSaida = new DataGridViewTextBoxColumn();
+            placaCarro = new DataGridViewTextBoxColumn();
+            dataEntrada = new DataGridViewTextBoxColumn();
+            dataSaida = new DataGridViewTextBoxColumn();
             isEstacionado = new DataGridViewTextBoxColumn();
             TempoEstacionado = new DataGridViewTextBoxColumn();
-            valorTotal = new DataGridViewTextBoxColumn();
-            ValorPagar = new DataGridViewTextBoxColumn();
+            valorCobrado = new DataGridViewTextBoxColumn();
+            totalApagar = new DataGridViewTextBoxColumn();
             LabelBemGuardado = new Label();
             LabelEstacionamento = new Label();
             ButtonRSaida = new Button();
             ButtonREntrada = new Button();
             openFileDialog1 = new OpenFileDialog();
+            buttonListarEstacionados = new Button();
+            buttonListarSaidas = new Button();
+            buttonListarGeral = new Button();
+            buttonAddTabelaPreco = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -53,6 +61,10 @@
             // panel1
             // 
             panel1.AutoSize = true;
+            panel1.Controls.Add(buttonAddTabelaPreco);
+            panel1.Controls.Add(buttonListarGeral);
+            panel1.Controls.Add(buttonListarSaidas);
+            panel1.Controls.Add(buttonListarEstacionados);
             panel1.Controls.Add(ArqTabelaPreco);
             panel1.Controls.Add(ArqEstacionamento);
             panel1.Controls.Add(dataGridView1);
@@ -87,18 +99,29 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.LightBlue;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle11.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = Color.FromArgb(224, 224, 224);
+            dataGridViewCellStyle12.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ID, Placa, HoraEntrada, HoraSaida, isEstacionado, TempoEstacionado, valorTotal, ValorPagar });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ID, placaCarro, dataEntrada, dataSaida, isEstacionado, TempoEstacionado, valorCobrado, totalApagar });
+            dataGridViewCellStyle14.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = SystemColors.Window;
+            dataGridViewCellStyle14.Font = new Font("Microsoft Sans Serif", 9F);
+            dataGridViewCellStyle14.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle14.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle14;
             dataGridView1.Location = new Point(22, 160);
             dataGridView1.Name = "dataGridView1";
+            dataGridViewCellStyle15.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle15.WrapMode = DataGridViewTriState.True;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(1121, 278);
             dataGridView1.TabIndex = 4;
@@ -106,31 +129,33 @@
             // 
             // ID
             // 
+            dataGridViewCellStyle13.Font = new Font("Microsoft Sans Serif", 9F);
+            ID.DefaultCellStyle = dataGridViewCellStyle13;
             ID.HeaderText = "ID";
             ID.MinimumWidth = 7;
             ID.Name = "ID";
             ID.Width = 125;
             // 
-            // Placa
+            // placaCarro
             // 
-            Placa.HeaderText = "Placa";
-            Placa.MinimumWidth = 6;
-            Placa.Name = "Placa";
-            Placa.Width = 132;
+            placaCarro.HeaderText = "Placa";
+            placaCarro.MinimumWidth = 6;
+            placaCarro.Name = "placaCarro";
+            placaCarro.Width = 132;
             // 
-            // HoraEntrada
+            // dataEntrada
             // 
-            HoraEntrada.HeaderText = "Hora Entrada";
-            HoraEntrada.MinimumWidth = 6;
-            HoraEntrada.Name = "HoraEntrada";
-            HoraEntrada.Width = 132;
+            dataEntrada.HeaderText = "Hora Entrada";
+            dataEntrada.MinimumWidth = 6;
+            dataEntrada.Name = "dataEntrada";
+            dataEntrada.Width = 132;
             // 
-            // HoraSaida
+            // dataSaida
             // 
-            HoraSaida.HeaderText = "Hora Saída";
-            HoraSaida.MinimumWidth = 6;
-            HoraSaida.Name = "HoraSaida";
-            HoraSaida.Width = 132;
+            dataSaida.HeaderText = "Hora Saída";
+            dataSaida.MinimumWidth = 6;
+            dataSaida.Name = "dataSaida";
+            dataSaida.Width = 132;
             // 
             // isEstacionado
             // 
@@ -146,19 +171,19 @@
             TempoEstacionado.Name = "TempoEstacionado";
             TempoEstacionado.Width = 143;
             // 
-            // valorTotal
+            // valorCobrado
             // 
-            valorTotal.HeaderText = "Valor Total";
-            valorTotal.MinimumWidth = 6;
-            valorTotal.Name = "valorTotal";
-            valorTotal.Width = 132;
+            valorCobrado.HeaderText = "Valor Total";
+            valorCobrado.MinimumWidth = 6;
+            valorCobrado.Name = "valorCobrado";
+            valorCobrado.Width = 132;
             // 
-            // ValorPagar
+            // totalApagar
             // 
-            ValorPagar.HeaderText = "Valor a Pagar";
-            ValorPagar.MinimumWidth = 6;
-            ValorPagar.Name = "ValorPagar";
-            ValorPagar.Width = 132;
+            totalApagar.HeaderText = "Valor a Pagar";
+            totalApagar.MinimumWidth = 6;
+            totalApagar.Name = "totalApagar";
+            totalApagar.Width = 132;
             // 
             // LabelBemGuardado
             // 
@@ -186,19 +211,20 @@
             // ButtonRSaida
             // 
             ButtonRSaida.ForeColor = Color.Red;
-            ButtonRSaida.Location = new Point(960, 89);
+            ButtonRSaida.Location = new Point(989, 89);
             ButtonRSaida.Name = "ButtonRSaida";
-            ButtonRSaida.Size = new Size(183, 50);
+            ButtonRSaida.Size = new Size(154, 50);
             ButtonRSaida.TabIndex = 1;
             ButtonRSaida.Text = "Registrar Saída";
             ButtonRSaida.UseVisualStyleBackColor = true;
+            ButtonRSaida.Click += ButtonRSaida_Click;
             // 
             // ButtonREntrada
             // 
             ButtonREntrada.ForeColor = Color.MediumSeaGreen;
-            ButtonREntrada.Location = new Point(960, 33);
+            ButtonREntrada.Location = new Point(989, 33);
             ButtonREntrada.Name = "ButtonREntrada";
-            ButtonREntrada.Size = new Size(183, 50);
+            ButtonREntrada.Size = new Size(154, 50);
             ButtonREntrada.TabIndex = 0;
             ButtonREntrada.Text = "Registrar Entrada";
             ButtonREntrada.UseVisualStyleBackColor = true;
@@ -207,6 +233,47 @@
             // openFileDialog1
             // 
             openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // buttonListarEstacionados
+            // 
+            buttonListarEstacionados.ForeColor = Color.MediumSeaGreen;
+            buttonListarEstacionados.Location = new Point(815, 33);
+            buttonListarEstacionados.Name = "buttonListarEstacionados";
+            buttonListarEstacionados.Size = new Size(154, 50);
+            buttonListarEstacionados.TabIndex = 7;
+            buttonListarEstacionados.Text = "Listar Carros Estacionados";
+            buttonListarEstacionados.UseVisualStyleBackColor = true;
+            buttonListarEstacionados.Click += button1_Click_2;
+            // 
+            // buttonListarSaidas
+            // 
+            buttonListarSaidas.ForeColor = Color.Red;
+            buttonListarSaidas.Location = new Point(814, 89);
+            buttonListarSaidas.Name = "buttonListarSaidas";
+            buttonListarSaidas.Size = new Size(154, 50);
+            buttonListarSaidas.TabIndex = 8;
+            buttonListarSaidas.Text = "Listar Saídas";
+            buttonListarSaidas.UseVisualStyleBackColor = true;
+            // 
+            // buttonListarGeral
+            // 
+            buttonListarGeral.Location = new Point(655, 58);
+            buttonListarGeral.Name = "buttonListarGeral";
+            buttonListarGeral.Size = new Size(154, 49);
+            buttonListarGeral.TabIndex = 9;
+            buttonListarGeral.Text = "Listar Geral";
+            buttonListarGeral.UseVisualStyleBackColor = true;
+            buttonListarGeral.Click += this.button3_Click;
+            // 
+            // buttonAddTabelaPreco
+            // 
+            buttonAddTabelaPreco.Location = new Point(363, 121);
+            buttonAddTabelaPreco.Name = "buttonAddTabelaPreco";
+            buttonAddTabelaPreco.Size = new Size(209, 29);
+            buttonAddTabelaPreco.TabIndex = 10;
+            buttonAddTabelaPreco.Text = "Adicionar Tebela de Preços";
+            buttonAddTabelaPreco.UseVisualStyleBackColor = true;
+            buttonAddTabelaPreco.Click += buttonAddTabelaPreco_Click;
             // 
             // Form1
             // 
@@ -231,16 +298,20 @@
         private Button ButtonRSaida;
         private Label LabelBemGuardado;
         private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn ID;
-        private DataGridViewTextBoxColumn Placa;
-        private DataGridViewTextBoxColumn HoraEntrada;
-        private DataGridViewTextBoxColumn HoraSaida;
-        private DataGridViewTextBoxColumn isEstacionado;
-        private DataGridViewTextBoxColumn TempoEstacionado;
-        private DataGridViewTextBoxColumn valorTotal;
-        private DataGridViewTextBoxColumn ValorPagar;
         private Button ArqTabelaPreco;
         private Button ArqEstacionamento;
         private OpenFileDialog openFileDialog1;
+        private DataGridViewTextBoxColumn ID;
+        private DataGridViewTextBoxColumn placaCarro;
+        private DataGridViewTextBoxColumn dataEntrada;
+        private DataGridViewTextBoxColumn dataSaida;
+        private DataGridViewTextBoxColumn isEstacionado;
+        private DataGridViewTextBoxColumn TempoEstacionado;
+        private DataGridViewTextBoxColumn valorCobrado;
+        private DataGridViewTextBoxColumn totalApagar;
+        private Button buttonAddTabelaPreco;
+        private Button buttonListarGeral;
+        private Button buttonListarSaidas;
+        private Button buttonListarEstacionados;
     }
 }

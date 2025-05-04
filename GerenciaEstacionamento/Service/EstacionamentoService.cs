@@ -23,5 +23,16 @@ namespace GerenciaEstacionamento.Service
             return listaRegistroEstacionamento.Last().getId();
         }
 
+        public TimeOnly calculartempoEstacionado(DateTime dataEntrada, DateTime dataSaida)
+        {
+            TimeSpan tempo = dataSaida - dataEntrada;
+            return new TimeOnly(tempo.Ticks);
+        }
+
+        public decimal calcularValorCobrado(TimeOnly tempoEstacionado, List<TabelaPrecos> listaTabelaPrecos)
+        {
+
+        }
+
     }
 }

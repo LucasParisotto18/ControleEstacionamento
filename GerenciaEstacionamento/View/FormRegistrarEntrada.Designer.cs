@@ -36,6 +36,7 @@
             textBoxPlaca = new TextBox();
             textBoxData = new TextBox();
             label4 = new Label();
+            buttonGetDataAtual = new Button();
             SuspendLayout();
             // 
             // buttonCancelar
@@ -113,11 +114,22 @@
             label4.Text = "Formato esperado: dd/MM/yyyy HH:mm:ss";
             label4.Click += label4_Click;
             // 
+            // buttonGetDataAtual
+            // 
+            buttonGetDataAtual.Location = new Point(430, 264);
+            buttonGetDataAtual.Name = "buttonGetDataAtual";
+            buttonGetDataAtual.Size = new Size(94, 29);
+            buttonGetDataAtual.TabIndex = 8;
+            buttonGetDataAtual.Text = "Hora Atual";
+            buttonGetDataAtual.UseVisualStyleBackColor = true;
+            buttonGetDataAtual.Click += button1_Click_1;
+            // 
             // FormRegistrarEntrada
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(752, 450);
+            Controls.Add(buttonGetDataAtual);
             Controls.Add(label4);
             Controls.Add(textBoxData);
             Controls.Add(textBoxPlaca);
@@ -142,5 +154,6 @@
         private TextBox textBoxPlaca;
         private TextBox textBoxData;
         private Label label4;
+        private Button buttonGetDataAtual;
     }
 }
