@@ -31,7 +31,7 @@ namespace GerenciaEstacionamento.Service
 
         public decimal calcularValorCobrado(TimeOnly tempoEstacionado, List<TabelaPrecos> listaTabelaPrecos)
         {
-
+            return 0;
         }
 
     }

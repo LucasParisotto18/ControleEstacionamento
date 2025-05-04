@@ -120,6 +120,49 @@ namespace GerenciaEstacionamento
             }
         }
 
+        private void atualizarGridViewSaidas()
+        {
+            dataGridView1.DataSource = null;
+            dataGridView1.Rows.Clear();
+            foreach (var registro in listaRegistroEstacionamento)
+            {
+                if (registro.getIsEstacionado().Equals(false))
+                {
+                    int index = dataGridView1.Rows.Add();
+                    dataGridView1.Rows[index].Cells["ID"].Value = registro.getId();
+                    dataGridView1.Rows[index].Cells["placaCarro"].Value = registro.getPlacaCarro();
+                    dataGridView1.Rows[index].Cells["dataEntrada"].Value = registro.getDataEntrada();
+                    dataGridView1.Rows[index].Cells["dataSaida"].Value = registro.getDataSaida();
+                    dataGridView1.Rows[index].Cells["isEstacionado"].Value = "Não";
+                    dataGridView1.Rows[index].Cells["tempoEstacionado"].Value = registro.getTempoEstacionado();
+                    dataGridView1.Rows[index].Cells["valorCobrado"].Value = registro.getValorCobrado();
+                    dataGridView1.Rows[index].Cells["totalAPagar"].Value = registro.getTotalAPagar();
+                }
+            }
+        }
+
+        private void atualizarGridViewEntradas()
+        {
+            dataGridView1.DataSource = null;
+            dataGridView1.Rows.Clear();
+            foreach (var registro in listaRegistroEstacionamento)
+            {
+                if (registro.getIsEstacionado().Equals(true))
+                {
+                    int index = dataGridView1.Rows.Add();
+                    dataGridView1.Rows[index].Cells["ID"].Value = registro.getId();
+                    dataGridView1.Rows[index].Cells["placaCarro"].Value = registro.getPlacaCarro();
+                    dataGridView1.Rows[index].Cells["dataEntrada"].Value = registro.getDataEntrada();
+                    dataGridView1.Rows[index].Cells["dataSaida"].Value = registro.getDataSaida();
+                    dataGridView1.Rows[index].Cells["isEstacionado"].Value = "Sim";
+                    dataGridView1.Rows[index].Cells["tempoEstacionado"].Value = registro.getTempoEstacionado();
+                    dataGridView1.Rows[index].Cells["valorCobrado"].Value = registro.getValorCobrado();
+                    dataGridView1.Rows[index].Cells["totalAPagar"].Value = registro.getTotalAPagar();
+                }
+            }
+        }
+
+
         private void ButtonRSaida_Click(object sender, EventArgs e)
         {
             FormRegistrarSaida formSaida = new FormRegistrarSaida(listaRegistroEstacionamento);
@@ -134,6 +177,12 @@ namespace GerenciaEstacionamento
 
         private void button1_Click_2(object sender, EventArgs e)
         {
+            atualizarGridViewEntradas();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AtualizarDataGridView();
 
         }
 
@@ -147,6 +196,11 @@ namespace GerenciaEstacionamento
 
 
             }
+        }
+
+        private void buttonListarSaidas_Click(object sender, EventArgs e)
+        {
+            atualizarGridViewSaidas();
         }
     }
 }

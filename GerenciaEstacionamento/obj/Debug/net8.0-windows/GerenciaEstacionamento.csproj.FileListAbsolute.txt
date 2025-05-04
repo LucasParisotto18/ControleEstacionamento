@@ -17,3 +17,4 @@ C:\Users\lucas\Projetos\ProjetoBenner\GerenciaEstacionamento\GerenciaEstacioname
 C:\Users\lucas\Projetos\ProjetoBenner\GerenciaEstacionamento\GerenciaEstacionamento\obj\Debug\net8.0-windows\GerenciaEstacionamento.sourcelink.json
 C:\Users\lucas\Projetos\ProjetoBenner\GerenciaEstacionamento\GerenciaEstacionamento\obj\Debug\net8.0-windows\GerenciaEstacionamento.View.FormRegistrarEntrada.resources
 C:\Users\lucas\Projetos\ProjetoBenner\GerenciaEstacionamento\GerenciaEstacionamento\obj\Debug\net8.0-windows\GerenciaEstacionamento.View.FormRegistrarSaida.resources
+C:\Users\lucas\Projetos\ProjetoBenner\GerenciaEstacionamento\GerenciaEstacionamento\obj\Debug\net8.0-windows\GerenciaEstacionamento.View.FormAddTabelaPrecos.resources
