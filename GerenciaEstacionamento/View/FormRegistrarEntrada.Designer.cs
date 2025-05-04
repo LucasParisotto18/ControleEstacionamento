@@ -30,13 +30,13 @@
         {
             buttonCancelar = new Button();
             buttonConfirmar = new Button();
-            label1 = new Label();
             label2 = new Label();
             label3 = new Label();
             textBoxPlaca = new TextBox();
             textBoxData = new TextBox();
             label4 = new Label();
             buttonGetDataAtual = new Button();
+            label1 = new Label();
             SuspendLayout();
             // 
             // buttonCancelar
@@ -58,17 +58,6 @@
             buttonConfirmar.Text = "Confirmar";
             buttonConfirmar.UseVisualStyleBackColor = true;
             buttonConfirmar.Click += button1_Click;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Enabled = false;
-            label1.Location = new Point(24, 26);
-            label1.Name = "label1";
-            label1.Size = new Size(162, 20);
-            label1.TabIndex = 2;
-            label1.Text = "Registrar Nova Entrada";
-            label1.Click += label1_Click;
             // 
             // label2
             // 
@@ -124,18 +113,27 @@
             buttonGetDataAtual.UseVisualStyleBackColor = true;
             buttonGetDataAtual.Click += button1_Click_1;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(27, 31);
+            label1.Name = "label1";
+            label1.Size = new Size(159, 20);
+            label1.TabIndex = 9;
+            label1.Text = "Registrar nova Entrada";
+            // 
             // FormRegistrarEntrada
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(752, 450);
+            Controls.Add(label1);
             Controls.Add(buttonGetDataAtual);
             Controls.Add(label4);
             Controls.Add(textBoxData);
             Controls.Add(textBoxPlaca);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(label1);
             Controls.Add(buttonConfirmar);
             Controls.Add(buttonCancelar);
             Name = "FormRegistrarEntrada";
@@ -148,12 +146,12 @@
 
         private Button buttonCancelar;
         private Button buttonConfirmar;
-        private Label label1;
         private Label label2;
         private Label label3;
         private TextBox textBoxPlaca;
         private TextBox textBoxData;
         private Label label4;
         private Button buttonGetDataAtual;
+        private Label label1;
     }
 }

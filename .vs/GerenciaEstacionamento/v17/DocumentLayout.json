@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\lucas\\Projetos\\ProjetoBenner\\GerenciaEstacionamento\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3EDFF377-8733-4EA1-9695-B4ADC509D7A5}|GerenciaEstacionamento\\GerenciaEstacionamento.csproj|c:\\users\\lucas\\projetos\\projetobenner\\gerenciaestacionamento\\gerenciaestacionamento\\view\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{3EDFF377-8733-4EA1-9695-B4ADC509D7A5}|GerenciaEstacionamento\\GerenciaEstacionamento.csproj|solutionrelative:gerenciaestacionamento\\view\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{3EDFF377-8733-4EA1-9695-B4ADC509D7A5}|GerenciaEstacionamento\\GerenciaEstacionamento.csproj|c:\\users\\lucas\\projetos\\projetobenner\\gerenciaestacionamento\\gerenciaestacionamento\\view\\formregistrarsaida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EDFF377-8733-4EA1-9695-B4ADC509D7A5}|GerenciaEstacionamento\\GerenciaEstacionamento.csproj|solutionrelative:gerenciaestacionamento\\view\\formregistrarsaida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3EDFF377-8733-4EA1-9695-B4ADC509D7A5}|GerenciaEstacionamento\\GerenciaEstacionamento.csproj|c:\\users\\lucas\\projetos\\projetobenner\\gerenciaestacionamento\\gerenciaestacionamento\\view\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3EDFF377-8733-4EA1-9695-B4ADC509D7A5}|GerenciaEstacionamento\\GerenciaEstacionamento.csproj|solutionrelative:gerenciaestacionamento\\view\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3EDFF377-8733-4EA1-9695-B4ADC509D7A5}|GerenciaEstacionamento\\GerenciaEstacionamento.csproj|c:\\users\\lucas\\projetos\\projetobenner\\gerenciaestacionamento\\gerenciaestacionamento\\controller\\importador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3EDFF377-8733-4EA1-9695-B4ADC509D7A5}|GerenciaEstacionamento\\GerenciaEstacionamento.csproj|solutionrelative:gerenciaestacionamento\\controller\\importador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3EDFF377-8733-4EA1-9695-B4ADC509D7A5}|GerenciaEstacionamento\\GerenciaEstacionamento.csproj|C:\\Users\\lucas\\Projetos\\ProjetoBenner\\GerenciaEstacionamento\\gerenciaestacionamento\\view\\formregistrarsaida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3EDFF377-8733-4EA1-9695-B4ADC509D7A5}|GerenciaEstacionamento\\GerenciaEstacionamento.csproj|solutionrelative:gerenciaestacionamento\\view\\formregistrarsaida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3EDFF377-8733-4EA1-9695-B4ADC509D7A5}|GerenciaEstacionamento\\GerenciaEstacionamento.csproj|c:\\users\\lucas\\projetos\\projetobenner\\gerenciaestacionamento\\gerenciaestacionamento\\view\\formregistrarentrada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,16 +19,24 @@
       "RelativeMoniker": "D:0:0:{3EDFF377-8733-4EA1-9695-B4ADC509D7A5}|GerenciaEstacionamento\\GerenciaEstacionamento.csproj|solutionrelative:gerenciaestacionamento\\view\\formregistrarentrada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{3EDFF377-8733-4EA1-9695-B4ADC509D7A5}|GerenciaEstacionamento\\GerenciaEstacionamento.csproj|c:\\users\\lucas\\projetos\\projetobenner\\gerenciaestacionamento\\gerenciaestacionamento\\service\\estacionamentoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EDFF377-8733-4EA1-9695-B4ADC509D7A5}|GerenciaEstacionamento\\GerenciaEstacionamento.csproj|solutionrelative:gerenciaestacionamento\\service\\estacionamentoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EDFF377-8733-4EA1-9695-B4ADC509D7A5}|GerenciaEstacionamento\\GerenciaEstacionamento.csproj|c:\\users\\lucas\\projetos\\projetobenner\\gerenciaestacionamento\\gerenciaestacionamento\\view\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EDFF377-8733-4EA1-9695-B4ADC509D7A5}|GerenciaEstacionamento\\GerenciaEstacionamento.csproj|solutionrelative:gerenciaestacionamento\\view\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EDFF377-8733-4EA1-9695-B4ADC509D7A5}|GerenciaEstacionamento\\GerenciaEstacionamento.csproj|c:\\users\\lucas\\projetos\\projetobenner\\gerenciaestacionamento\\gerenciaestacionamento\\view\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3EDFF377-8733-4EA1-9695-B4ADC509D7A5}|GerenciaEstacionamento\\GerenciaEstacionamento.csproj|solutionrelative:gerenciaestacionamento\\view\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EDFF377-8733-4EA1-9695-B4ADC509D7A5}|GerenciaEstacionamento\\GerenciaEstacionamento.csproj|c:\\users\\lucas\\projetos\\projetobenner\\gerenciaestacionamento\\gerenciaestacionamento\\controller\\importador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EDFF377-8733-4EA1-9695-B4ADC509D7A5}|GerenciaEstacionamento\\GerenciaEstacionamento.csproj|solutionrelative:gerenciaestacionamento\\controller\\importador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3EDFF377-8733-4EA1-9695-B4ADC509D7A5}|GerenciaEstacionamento\\GerenciaEstacionamento.csproj|c:\\users\\lucas\\projetos\\projetobenner\\gerenciaestacionamento\\gerenciaestacionamento\\view\\formregistrarentrada.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3EDFF377-8733-4EA1-9695-B4ADC509D7A5}|GerenciaEstacionamento\\GerenciaEstacionamento.csproj|solutionrelative:gerenciaestacionamento\\view\\formregistrarentrada.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3EDFF377-8733-4EA1-9695-B4ADC509D7A5}|GerenciaEstacionamento\\GerenciaEstacionamento.csproj|c:\\users\\lucas\\projetos\\projetobenner\\gerenciaestacionamento\\gerenciaestacionamento\\view\\formregistrarsaida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3EDFF377-8733-4EA1-9695-B4ADC509D7A5}|GerenciaEstacionamento\\GerenciaEstacionamento.csproj|solutionrelative:gerenciaestacionamento\\view\\formregistrarsaida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3EDFF377-8733-4EA1-9695-B4ADC509D7A5}|GerenciaEstacionamento\\GerenciaEstacionamento.csproj|C:\\Users\\lucas\\Projetos\\ProjetoBenner\\GerenciaEstacionamento\\gerenciaestacionamento\\view\\formregistrarsaida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{3EDFF377-8733-4EA1-9695-B4ADC509D7A5}|GerenciaEstacionamento\\GerenciaEstacionamento.csproj|solutionrelative:gerenciaestacionamento\\view\\formregistrarsaida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3EDFF377-8733-4EA1-9695-B4ADC509D7A5}|GerenciaEstacionamento\\GerenciaEstacionamento.csproj|c:\\users\\lucas\\projetos\\projetobenner\\gerenciaestacionamento\\gerenciaestacionamento\\view\\formaddtabelaprecos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -45,10 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3EDFF377-8733-4EA1-9695-B4ADC509D7A5}|GerenciaEstacionamento\\GerenciaEstacionamento.csproj|c:\\users\\lucas\\projetos\\projetobenner\\gerenciaestacionamento\\gerenciaestacionamento\\view\\formaddtabelaprecos.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3EDFF377-8733-4EA1-9695-B4ADC509D7A5}|GerenciaEstacionamento\\GerenciaEstacionamento.csproj|solutionrelative:gerenciaestacionamento\\view\\formaddtabelaprecos.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3EDFF377-8733-4EA1-9695-B4ADC509D7A5}|GerenciaEstacionamento\\GerenciaEstacionamento.csproj|c:\\users\\lucas\\projetos\\projetobenner\\gerenciaestacionamento\\gerenciaestacionamento\\service\\estacionamentoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3EDFF377-8733-4EA1-9695-B4ADC509D7A5}|GerenciaEstacionamento\\GerenciaEstacionamento.csproj|solutionrelative:gerenciaestacionamento\\service\\estacionamentoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3EDFF377-8733-4EA1-9695-B4ADC509D7A5}|GerenciaEstacionamento\\GerenciaEstacionamento.csproj|c:\\users\\lucas\\projetos\\projetobenner\\gerenciaestacionamento\\gerenciaestacionamento\\model\\registroestacionamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -78,17 +78,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\lucas\\Projetos\\ProjetoBenner\\GerenciaEstacionamento\\GerenciaEstacionamento\\View\\Form1.cs",
               "RelativeDocumentMoniker": "GerenciaEstacionamento\\View\\Form1.cs",
               "ToolTip": "C:\\Users\\lucas\\Projetos\\ProjetoBenner\\GerenciaEstacionamento\\GerenciaEstacionamento\\View\\Form1.cs",
               "RelativeToolTip": "GerenciaEstacionamento\\View\\Form1.cs",
-              "ViewState": "AgIAAPYAAAAAAAAAAADgvwMBAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAuwKsAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-03T21:49:24.939Z",
               "IsPinned": true,
@@ -96,7 +96,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "Form1.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\lucas\\Projetos\\ProjetoBenner\\GerenciaEstacionamento\\GerenciaEstacionamento\\View\\Form1.cs",
               "RelativeDocumentMoniker": "GerenciaEstacionamento\\View\\Form1.cs",
@@ -117,7 +117,45 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
+              "Title": "FormRegistrarEntrada.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\Projetos\\ProjetoBenner\\GerenciaEstacionamento\\GerenciaEstacionamento\\View\\FormRegistrarEntrada.cs",
+              "RelativeDocumentMoniker": "GerenciaEstacionamento\\View\\FormRegistrarEntrada.cs",
+              "ToolTip": "C:\\Users\\lucas\\Projetos\\ProjetoBenner\\GerenciaEstacionamento\\GerenciaEstacionamento\\View\\FormRegistrarEntrada.cs",
+              "RelativeToolTip": "GerenciaEstacionamento\\View\\FormRegistrarEntrada.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAiwC8AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T00:33:06.548Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormRegistrarSaida.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\lucas\\Projetos\\ProjetoBenner\\GerenciaEstacionamento\\GerenciaEstacionamento\\View\\FormRegistrarSaida.cs",
+              "RelativeDocumentMoniker": "GerenciaEstacionamento\\View\\FormRegistrarSaida.cs",
+              "ToolTip": "C:\\Users\\lucas\\Projetos\\ProjetoBenner\\GerenciaEstacionamento\\GerenciaEstacionamento\\View\\FormRegistrarSaida.cs [Projeto]",
+              "RelativeToolTip": "GerenciaEstacionamento\\View\\FormRegistrarSaida.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T00:31:15.646Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormRegistrarSaida.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\Projetos\\ProjetoBenner\\GerenciaEstacionamento\\GerenciaEstacionamento\\View\\FormRegistrarSaida.cs",
+              "RelativeDocumentMoniker": "GerenciaEstacionamento\\View\\FormRegistrarSaida.cs",
+              "ToolTip": "C:\\Users\\lucas\\Projetos\\ProjetoBenner\\GerenciaEstacionamento\\GerenciaEstacionamento\\View\\FormRegistrarSaida.cs",
+              "RelativeToolTip": "GerenciaEstacionamento\\View\\FormRegistrarSaida.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAmwDsAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T00:48:29.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "FormRegistrarEntrada.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\lucas\\Projetos\\ProjetoBenner\\GerenciaEstacionamento\\GerenciaEstacionamento\\View\\FormRegistrarEntrada.cs",
               "RelativeDocumentMoniker": "GerenciaEstacionamento\\View\\FormRegistrarEntrada.cs",
@@ -129,33 +167,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FormRegistrarEntrada.cs",
-              "DocumentMoniker": "C:\\Users\\lucas\\Projetos\\ProjetoBenner\\GerenciaEstacionamento\\GerenciaEstacionamento\\View\\FormRegistrarEntrada.cs",
-              "RelativeDocumentMoniker": "GerenciaEstacionamento\\View\\FormRegistrarEntrada.cs",
-              "ToolTip": "C:\\Users\\lucas\\Projetos\\ProjetoBenner\\GerenciaEstacionamento\\GerenciaEstacionamento\\View\\FormRegistrarEntrada.cs",
-              "RelativeToolTip": "GerenciaEstacionamento\\View\\FormRegistrarEntrada.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAIAwwEUAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "EstacionamentoService.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\Projetos\\ProjetoBenner\\GerenciaEstacionamento\\GerenciaEstacionamento\\Service\\EstacionamentoService.cs",
+              "RelativeDocumentMoniker": "GerenciaEstacionamento\\Service\\EstacionamentoService.cs",
+              "ToolTip": "C:\\Users\\lucas\\Projetos\\ProjetoBenner\\GerenciaEstacionamento\\GerenciaEstacionamento\\Service\\EstacionamentoService.cs",
+              "RelativeToolTip": "GerenciaEstacionamento\\Service\\EstacionamentoService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB4AAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T00:33:06.548Z",
+              "WhenOpened": "2025-05-01T16:39:03.876Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Importador.cs",
-              "DocumentMoniker": "C:\\Users\\lucas\\Projetos\\ProjetoBenner\\GerenciaEstacionamento\\GerenciaEstacionamento\\Controller\\Importador.cs",
-              "RelativeDocumentMoniker": "GerenciaEstacionamento\\Controller\\Importador.cs",
-              "ToolTip": "C:\\Users\\lucas\\Projetos\\ProjetoBenner\\GerenciaEstacionamento\\GerenciaEstacionamento\\Controller\\Importador.cs",
-              "RelativeToolTip": "GerenciaEstacionamento\\Controller\\Importador.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T21:35:16.086Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "FormRegistrarEntrada.Designer.cs",
               "DocumentMoniker": "C:\\Users\\lucas\\Projetos\\ProjetoBenner\\GerenciaEstacionamento\\GerenciaEstacionamento\\View\\FormRegistrarEntrada.Designer.cs",
               "RelativeDocumentMoniker": "GerenciaEstacionamento\\View\\FormRegistrarEntrada.Designer.cs",
@@ -168,32 +193,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "FormRegistrarSaida.cs",
-              "DocumentMoniker": "C:\\Users\\lucas\\Projetos\\ProjetoBenner\\GerenciaEstacionamento\\GerenciaEstacionamento\\View\\FormRegistrarSaida.cs",
-              "RelativeDocumentMoniker": "GerenciaEstacionamento\\View\\FormRegistrarSaida.cs",
-              "ToolTip": "C:\\Users\\lucas\\Projetos\\ProjetoBenner\\GerenciaEstacionamento\\GerenciaEstacionamento\\View\\FormRegistrarSaida.cs",
-              "RelativeToolTip": "GerenciaEstacionamento\\View\\FormRegistrarSaida.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAkwFgAAABQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T00:48:29.669Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "FormRegistrarSaida.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\lucas\\Projetos\\ProjetoBenner\\GerenciaEstacionamento\\GerenciaEstacionamento\\View\\FormRegistrarSaida.cs",
-              "RelativeDocumentMoniker": "GerenciaEstacionamento\\View\\FormRegistrarSaida.cs",
-              "ToolTip": "C:\\Users\\lucas\\Projetos\\ProjetoBenner\\GerenciaEstacionamento\\GerenciaEstacionamento\\View\\FormRegistrarSaida.cs [Projeto]",
-              "RelativeToolTip": "GerenciaEstacionamento\\View\\FormRegistrarSaida.cs [Projeto]",
+              "Title": "Importador.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\Projetos\\ProjetoBenner\\GerenciaEstacionamento\\GerenciaEstacionamento\\Controller\\Importador.cs",
+              "RelativeDocumentMoniker": "GerenciaEstacionamento\\Controller\\Importador.cs",
+              "ToolTip": "C:\\Users\\lucas\\Projetos\\ProjetoBenner\\GerenciaEstacionamento\\GerenciaEstacionamento\\Controller\\Importador.cs",
+              "RelativeToolTip": "GerenciaEstacionamento\\Controller\\Importador.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T00:31:15.646Z",
-              "EditorCaption": " [Projeto]"
+              "WhenOpened": "2025-05-02T21:35:16.086Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "FormAddTabelaPrecos.cs",
               "DocumentMoniker": "C:\\Users\\lucas\\Projetos\\ProjetoBenner\\GerenciaEstacionamento\\GerenciaEstacionamento\\View\\FormAddTabelaPrecos.cs",
               "RelativeDocumentMoniker": "GerenciaEstacionamento\\View\\FormAddTabelaPrecos.cs",
@@ -206,19 +218,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "FormAddTabelaPrecos.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\lucas\\Projetos\\ProjetoBenner\\GerenciaEstacionamento\\GerenciaEstacionamento\\View\\FormAddTabelaPrecos.cs",
               "RelativeDocumentMoniker": "GerenciaEstacionamento\\View\\FormAddTabelaPrecos.cs",
               "ToolTip": "C:\\Users\\lucas\\Projetos\\ProjetoBenner\\GerenciaEstacionamento\\GerenciaEstacionamento\\View\\FormAddTabelaPrecos.cs [Projeto]",
               "RelativeToolTip": "GerenciaEstacionamento\\View\\FormAddTabelaPrecos.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T02:37:43.056Z",
-              "EditorCaption": " [Projeto]"
+              "WhenOpened": "2025-05-04T02:37:43.056Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "FormAddTabelaPrecos.Designer.cs",
               "DocumentMoniker": "C:\\Users\\lucas\\Projetos\\ProjetoBenner\\GerenciaEstacionamento\\GerenciaEstacionamento\\View\\FormAddTabelaPrecos.Designer.cs",
               "RelativeDocumentMoniker": "GerenciaEstacionamento\\View\\FormAddTabelaPrecos.Designer.cs",
@@ -226,21 +237,7 @@
               "RelativeToolTip": "GerenciaEstacionamento\\View\\FormAddTabelaPrecos.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T17:53:38.329Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "EstacionamentoService.cs",
-              "DocumentMoniker": "C:\\Users\\lucas\\Projetos\\ProjetoBenner\\GerenciaEstacionamento\\GerenciaEstacionamento\\Service\\EstacionamentoService.cs",
-              "RelativeDocumentMoniker": "GerenciaEstacionamento\\Service\\EstacionamentoService.cs",
-              "ToolTip": "C:\\Users\\lucas\\Projetos\\ProjetoBenner\\GerenciaEstacionamento\\GerenciaEstacionamento\\Service\\EstacionamentoService.cs",
-              "RelativeToolTip": "GerenciaEstacionamento\\Service\\EstacionamentoService.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAlwDgAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T16:39:03.876Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-04T17:53:38.329Z"
             },
             {
               "$type": "Document",
@@ -252,8 +249,7 @@
               "RelativeToolTip": "GerenciaEstacionamento\\Model\\RegistroEstacionamento.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T14:39:35.923Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-01T14:39:35.923Z"
             },
             {
               "$type": "Document",
@@ -265,8 +261,7 @@
               "RelativeToolTip": "GerenciaEstacionamento\\Model\\TabelaPrecos.cs",
               "ViewState": "AgIAACcAAAAAAAAAAAAowAwAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T23:53:12.325Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-30T23:53:12.325Z"
             },
             {
               "$type": "Document",
@@ -278,8 +273,7 @@
               "RelativeToolTip": "GerenciaEstacionamento\\Model\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T23:49:10.966Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-30T23:49:10.966Z"
             },
             {
               "$type": "Document",

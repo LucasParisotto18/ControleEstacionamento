@@ -66,30 +66,35 @@ namespace GerenciaEstacionamento.View
             
             int IdLinhaSelecionada = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["ID"].Value);
             RegistroEstacionamento estacionamentoSelecionado = new RegistroEstacionamento();
-
-            //MessageBox.Show($"Teste {IdLinhaSelecionada}");
             //MessageBox.Show($"Teste {IndexLinha}");
 
             estacionamentoSelecionado = ListaRegistrosEstacionamento.FirstOrDefault(registroAtual => registroAtual.getId() == IdLinhaSelecionada);
 
+            if (estacionamentoSelecionado.getDataEntrada() >= DateTime.Parse(textBoxHorario.Text))
+            {
+                MessageBox.Show("Data de saída deve ser maior que a data de entrada.");
+                
+            } else
+            {
+                estacionamentoSelecionado.setDataSaida(DateTime.Parse(textBoxHorario.Text));
+                estacionamentoSelecionado.setIsEstacionado(false);
+                TimeSpan tempoEstacionado = estacionamentoService.calculartempoEstacionado(estacionamentoSelecionado.getDataEntrada(), DateTime.Parse(textBoxHorario.Text));
+                estacionamentoSelecionado.setTempoEstacionado(tempoEstacionado);
+                decimal valorCobrado = estacionamentoService.calcularValorCobrado(estacionamentoSelecionado, ListaTabelaPrecos);
+                estacionamentoSelecionado.setValorCobrado(valorCobrado);
+                estacionamentoSelecionado.setTotalAPagar(valorCobrado);
 
-            estacionamentoSelecionado.setDataSaida(DateTime.Parse(textBoxHorario.Text));
-            estacionamentoSelecionado.setIsEstacionado(false);
-            TimeSpan tempoEstacionado = estacionamentoService.calculartempoEstacionado(estacionamentoSelecionado.getDataEntrada(), DateTime.Parse(textBoxHorario.Text));
-            estacionamentoSelecionado.setTempoEstacionado(tempoEstacionado);
-            decimal valorCobrado = estacionamentoService.calcularValorCobrado(estacionamentoSelecionado, ListaTabelaPrecos);
-            estacionamentoSelecionado.setValorCobrado(valorCobrado);
-            estacionamentoSelecionado.setTotalAPagar(valorCobrado);            
+                MessageBox.Show($"Saída registrada com sucesso! \n\n" +
+                    $"  Placa: {estacionamentoSelecionado.getPlacaCarro()} \n" +
+                    $"  Data Entrada: {estacionamentoSelecionado.getDataEntrada()} \n" +
+                    $"  Data Saída: {estacionamentoSelecionado.getDataSaida()} \n" +
+                    $"  Tempo Estacionado: {estacionamentoSelecionado.getTempoEstacionado()} \n\n" +
+                    $"  Valor a Pagar: {estacionamentoSelecionado.getValorCobrado()}");
 
-            MessageBox.Show($"Saída registrada com sucesso! \n\n" +
-                $"  Placa: {estacionamentoSelecionado.getPlacaCarro()} \n" +
-                $"  Data Entrada: {estacionamentoSelecionado.getDataEntrada()} \n" +
-                $"  Data Saída: {estacionamentoSelecionado.getDataSaida()} \n" +
-                $"  Tempo Estacionado: {estacionamentoSelecionado.getTempoEstacionado()} \n\n" +
-                $"  Valor a Pagar: {estacionamentoSelecionado.getValorCobrado()}");
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
 
-            this.DialogResult = DialogResult.OK;
-            this.Close();
 
         }
 
