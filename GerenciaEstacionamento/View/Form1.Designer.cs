@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
             panel1 = new Panel();
+            labelFiltroPlaca = new Label();
+            buttonBuscarPlaca = new Button();
+            textBoxFiltroPlaca = new TextBox();
             buttonAddTabelaPreco = new Button();
             buttonListarGeral = new Button();
             buttonListarSaidas = new Button();
@@ -61,6 +64,9 @@
             // panel1
             // 
             panel1.AutoSize = true;
+            panel1.Controls.Add(labelFiltroPlaca);
+            panel1.Controls.Add(buttonBuscarPlaca);
+            panel1.Controls.Add(textBoxFiltroPlaca);
             panel1.Controls.Add(buttonAddTabelaPreco);
             panel1.Controls.Add(buttonListarGeral);
             panel1.Controls.Add(buttonListarSaidas);
@@ -74,12 +80,38 @@
             panel1.Controls.Add(ButtonREntrada);
             panel1.Location = new Point(-1, -1);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1173, 445);
+            panel1.Size = new Size(1173, 537);
             panel1.TabIndex = 0;
+            // 
+            // labelFiltroPlaca
+            // 
+            labelFiltroPlaca.AutoSize = true;
+            labelFiltroPlaca.Location = new Point(19, 91);
+            labelFiltroPlaca.Name = "labelFiltroPlaca";
+            labelFiltroPlaca.Size = new Size(188, 20);
+            labelFiltroPlaca.TabIndex = 13;
+            labelFiltroPlaca.Text = "Informe a Placa do veículo:";
+            // 
+            // buttonBuscarPlaca
+            // 
+            buttonBuscarPlaca.Location = new Point(188, 119);
+            buttonBuscarPlaca.Name = "buttonBuscarPlaca";
+            buttonBuscarPlaca.Size = new Size(101, 28);
+            buttonBuscarPlaca.TabIndex = 12;
+            buttonBuscarPlaca.Text = "Buscar Placa";
+            buttonBuscarPlaca.UseVisualStyleBackColor = true;
+            buttonBuscarPlaca.Click += buttonBuscarPlaca_Click;
+            // 
+            // textBoxFiltroPlaca
+            // 
+            textBoxFiltroPlaca.Location = new Point(22, 120);
+            textBoxFiltroPlaca.Name = "textBoxFiltroPlaca";
+            textBoxFiltroPlaca.Size = new Size(160, 27);
+            textBoxFiltroPlaca.TabIndex = 11;
             // 
             // buttonAddTabelaPreco
             // 
-            buttonAddTabelaPreco.Location = new Point(363, 121);
+            buttonAddTabelaPreco.Location = new Point(902, 109);
             buttonAddTabelaPreco.Name = "buttonAddTabelaPreco";
             buttonAddTabelaPreco.Size = new Size(209, 29);
             buttonAddTabelaPreco.TabIndex = 10;
@@ -89,18 +121,18 @@
             // 
             // buttonListarGeral
             // 
-            buttonListarGeral.Location = new Point(655, 58);
+            buttonListarGeral.Location = new Point(22, 455);
             buttonListarGeral.Name = "buttonListarGeral";
-            buttonListarGeral.Size = new Size(154, 49);
+            buttonListarGeral.Size = new Size(154, 50);
             buttonListarGeral.TabIndex = 9;
-            buttonListarGeral.Text = "Listar Geral";
+            buttonListarGeral.Text = "Listar Tudo";
             buttonListarGeral.UseVisualStyleBackColor = true;
             buttonListarGeral.Click += button3_Click;
             // 
             // buttonListarSaidas
             // 
             buttonListarSaidas.ForeColor = Color.Red;
-            buttonListarSaidas.Location = new Point(814, 89);
+            buttonListarSaidas.Location = new Point(351, 455);
             buttonListarSaidas.Name = "buttonListarSaidas";
             buttonListarSaidas.Size = new Size(154, 50);
             buttonListarSaidas.TabIndex = 8;
@@ -111,7 +143,7 @@
             // buttonListarEstacionados
             // 
             buttonListarEstacionados.ForeColor = Color.MediumSeaGreen;
-            buttonListarEstacionados.Location = new Point(815, 33);
+            buttonListarEstacionados.Location = new Point(182, 455);
             buttonListarEstacionados.Name = "buttonListarEstacionados";
             buttonListarEstacionados.Size = new Size(154, 50);
             buttonListarEstacionados.TabIndex = 7;
@@ -121,9 +153,9 @@
             // 
             // ArqTabelaPreco
             // 
-            ArqTabelaPreco.Location = new Point(22, 121);
+            ArqTabelaPreco.Location = new Point(865, 68);
             ArqTabelaPreco.Name = "ArqTabelaPreco";
-            ArqTabelaPreco.Size = new Size(335, 29);
+            ArqTabelaPreco.Size = new Size(278, 29);
             ArqTabelaPreco.TabIndex = 6;
             ArqTabelaPreco.Text = "Selecionar Arquivo de Tabelas de Preço";
             ArqTabelaPreco.UseVisualStyleBackColor = true;
@@ -131,9 +163,9 @@
             // 
             // ArqEstacionamento
             // 
-            ArqEstacionamento.Location = new Point(22, 89);
+            ArqEstacionamento.Location = new Point(865, 29);
             ArqEstacionamento.Name = "ArqEstacionamento";
-            ArqEstacionamento.Size = new Size(335, 29);
+            ArqEstacionamento.Size = new Size(278, 29);
             ArqEstacionamento.TabIndex = 5;
             ArqEstacionamento.Text = "Selecionar Arquivo Estacionamento";
             ArqEstacionamento.UseVisualStyleBackColor = true;
@@ -141,29 +173,29 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(224, 224, 224);
-            dataGridViewCellStyle2.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = Color.FromArgb(224, 224, 224);
+            dataGridViewCellStyle7.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ID, placaCarro, dataEntrada, dataSaida, isEstacionado, TempoEstacionado, valorCobrado, totalApagar });
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = SystemColors.Window;
-            dataGridViewCellStyle4.Font = new Font("Microsoft Sans Serif", 9F);
-            dataGridViewCellStyle4.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = SystemColors.Window;
+            dataGridViewCellStyle9.Font = new Font("Microsoft Sans Serif", 9F);
+            dataGridViewCellStyle9.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle9.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle9;
             dataGridView1.Location = new Point(22, 160);
             dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle10.WrapMode = DataGridViewTriState.True;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(1121, 278);
             dataGridView1.TabIndex = 4;
@@ -171,8 +203,8 @@
             // 
             // ID
             // 
-            dataGridViewCellStyle3.Font = new Font("Microsoft Sans Serif", 9F);
-            ID.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.Font = new Font("Microsoft Sans Serif", 9F);
+            ID.DefaultCellStyle = dataGridViewCellStyle8;
             ID.HeaderText = "ID";
             ID.MinimumWidth = 7;
             ID.Name = "ID";
@@ -232,7 +264,7 @@
             LabelBemGuardado.AutoSize = true;
             LabelBemGuardado.Font = new Font("Segoe UI Historic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LabelBemGuardado.ForeColor = SystemColors.MenuHighlight;
-            LabelBemGuardado.Location = new Point(42, 41);
+            LabelBemGuardado.Location = new Point(19, 41);
             LabelBemGuardado.Name = "LabelBemGuardado";
             LabelBemGuardado.Size = new Size(315, 41);
             LabelBemGuardado.TabIndex = 3;
@@ -253,9 +285,9 @@
             // ButtonRSaida
             // 
             ButtonRSaida.ForeColor = Color.Red;
-            ButtonRSaida.Location = new Point(989, 89);
+            ButtonRSaida.Location = new Point(986, 460);
             ButtonRSaida.Name = "ButtonRSaida";
-            ButtonRSaida.Size = new Size(154, 50);
+            ButtonRSaida.Size = new Size(157, 50);
             ButtonRSaida.TabIndex = 1;
             ButtonRSaida.Text = "Registrar Saída";
             ButtonRSaida.UseVisualStyleBackColor = true;
@@ -264,9 +296,9 @@
             // ButtonREntrada
             // 
             ButtonREntrada.ForeColor = Color.MediumSeaGreen;
-            ButtonREntrada.Location = new Point(989, 33);
+            ButtonREntrada.Location = new Point(823, 460);
             ButtonREntrada.Name = "ButtonREntrada";
-            ButtonREntrada.Size = new Size(154, 50);
+            ButtonREntrada.Size = new Size(157, 50);
             ButtonREntrada.TabIndex = 0;
             ButtonREntrada.Text = "Registrar Entrada";
             ButtonREntrada.UseVisualStyleBackColor = true;
@@ -280,7 +312,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1172, 444);
+            ClientSize = new Size(1172, 536);
             Controls.Add(panel1);
             Name = "Form1";
             Text = "Form1";
@@ -314,5 +346,8 @@
         private Button buttonListarGeral;
         private Button buttonListarSaidas;
         private Button buttonListarEstacionados;
+        private Label labelFiltroPlaca;
+        private Button buttonBuscarPlaca;
+        private TextBox textBoxFiltroPlaca;
     }
 }

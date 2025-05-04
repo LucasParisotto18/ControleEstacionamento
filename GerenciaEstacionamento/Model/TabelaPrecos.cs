@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GerenciaEstacionamento.Model
 {
-    internal class TabelaPrecos
+    public class TabelaPrecos
     {
         private int id;
         private DateTime dataInicioVigencia;

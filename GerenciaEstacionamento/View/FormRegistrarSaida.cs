@@ -15,6 +15,7 @@ namespace GerenciaEstacionamento.View
     public partial class FormRegistrarSaida : Form
     {
         private List<RegistroEstacionamento> ListaRegistrosEstacionamento = new List<RegistroEstacionamento>();
+        private List<TabelaPrecos> ListaTabelaPrecos = new List<TabelaPrecos>();
         EstacionamentoService estacionamentoService = new EstacionamentoService();
 
         public FormRegistrarSaida()
@@ -22,12 +23,18 @@ namespace GerenciaEstacionamento.View
             InitializeComponent();
         }
 
-        public FormRegistrarSaida(List<RegistroEstacionamento> ListaRegistrosEstacionamento)
+        public List<RegistroEstacionamento> getRegistroEstacionamentos()
+        {
+            return ListaRegistrosEstacionamento;
+        }
+
+        public FormRegistrarSaida(List<RegistroEstacionamento> ListaRegistrosEstacionamento, List<TabelaPrecos> listaTabelaPreco)
         {
             InitializeComponent();
             this.ListaRegistrosEstacionamento = ListaRegistrosEstacionamento;
+            this.ListaTabelaPrecos = listaTabelaPreco;
             AtualizarDataGridView();
-
+             
         }
 
 
@@ -54,15 +61,32 @@ namespace GerenciaEstacionamento.View
                 return;
             }
 
-            int IndexLinha = dataGridView1.SelectedRows[0].Index;
+            // IndexLinha = dataGridView1.SelectedRows[0].Index;
+            //int IdLinhaSelecionada = ListaRegistrosEstacionamento[IndexLinha].getId();
+            
+            int IdLinhaSelecionada = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["ID"].Value);
             RegistroEstacionamento estacionamentoSelecionado = new RegistroEstacionamento();
 
-            estacionamentoSelecionado = ListaRegistrosEstacionamento[IndexLinha];
+            //MessageBox.Show($"Teste {IdLinhaSelecionada}");
+            //MessageBox.Show($"Teste {IndexLinha}");
+
+            estacionamentoSelecionado = ListaRegistrosEstacionamento.FirstOrDefault(registroAtual => registroAtual.getId() == IdLinhaSelecionada);
+
 
             estacionamentoSelecionado.setDataSaida(DateTime.Parse(textBoxHorario.Text));
             estacionamentoSelecionado.setIsEstacionado(false);
-            estacionamentoSelecionado.setTempoEstacionado(estacionamentoService.calculartempoEstacionado(estacionamentoSelecionado.getDataEntrada(), estacionamentoSelecionado.getDataSaida().Value));
+            TimeSpan tempoEstacionado = estacionamentoService.calculartempoEstacionado(estacionamentoSelecionado.getDataEntrada(), DateTime.Parse(textBoxHorario.Text));
+            estacionamentoSelecionado.setTempoEstacionado(tempoEstacionado);
+            decimal valorCobrado = estacionamentoService.calcularValorCobrado(estacionamentoSelecionado, ListaTabelaPrecos);
+            estacionamentoSelecionado.setValorCobrado(valorCobrado);
+            estacionamentoSelecionado.setTotalAPagar(valorCobrado);            
 
+            MessageBox.Show($"Saída registrada com sucesso! \n\n" +
+                $"  Placa: {estacionamentoSelecionado.getPlacaCarro()} \n" +
+                $"  Data Entrada: {estacionamentoSelecionado.getDataEntrada()} \n" +
+                $"  Data Saída: {estacionamentoSelecionado.getDataSaida()} \n" +
+                $"  Tempo Estacionado: {estacionamentoSelecionado.getTempoEstacionado()} \n\n" +
+                $"  Valor a Pagar: {estacionamentoSelecionado.getValorCobrado()}");
 
             this.DialogResult = DialogResult.OK;
             this.Close();
@@ -88,18 +112,6 @@ namespace GerenciaEstacionamento.View
                     dataGridView1.Rows[index].Cells["ID"].Value = registro.getId();
                     dataGridView1.Rows[index].Cells["placaCarro"].Value = registro.getPlacaCarro();
                     dataGridView1.Rows[index].Cells["dataEntrada"].Value = registro.getDataEntrada();
-                    dataGridView1.Rows[index].Cells["dataSaida"].Value = registro.getDataSaida();
-                    if (registro.getIsEstacionado().Equals(true))
-                    {
-                        dataGridView1.Rows[index].Cells["isEstacionado"].Value = "Sim";
-                    }
-                    else
-                    {
-                        dataGridView1.Rows[index].Cells["isEstacionado"].Value = "Não";
-                    }
-                    dataGridView1.Rows[index].Cells["tempoEstacionado"].Value = registro.getTempoEstacionado();
-                    dataGridView1.Rows[index].Cells["valorCobrado"].Value = registro.getValorCobrado();
-                    dataGridView1.Rows[index].Cells["totalAPagar"].Value = registro.getTotalAPagar();
                 }
                
 

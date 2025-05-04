@@ -45,7 +45,7 @@ namespace GerenciaEstacionamento.Controller
                         }
                         else
                         {
-                            registroEstacionamento.setTempoEstacionado(TimeOnly.Parse(dados[5]));
+                            registroEstacionamento.setTempoEstacionado(TimeSpan.Parse(dados[5]));
                         }
                         if (string.IsNullOrEmpty(dados[6]))
                         {

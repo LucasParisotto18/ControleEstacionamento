@@ -30,13 +30,13 @@
         {
             buttonCancelar = new Button();
             buttonConfirmar = new Button();
-            label1 = new Label();
+            labelTitulo = new Label();
             dataGridView1 = new DataGridView();
             Id = new DataGridViewTextBoxColumn();
             placaCarro = new DataGridViewTextBoxColumn();
             dataEntrada = new DataGridViewTextBoxColumn();
-            label2 = new Label();
-            label3 = new Label();
+            labelSelecioneCarro = new Label();
+            labelInformeHoraSaida = new Label();
             textBoxHorario = new TextBox();
             label4 = new Label();
             buttonHorarioArtual = new Button();
@@ -63,14 +63,14 @@
             buttonConfirmar.UseVisualStyleBackColor = true;
             buttonConfirmar.Click += buttonConfirmar_Click;
             // 
-            // label1
+            // labelTitulo
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(21, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(109, 20);
-            label1.TabIndex = 2;
-            label1.Text = "Registrar Saída";
+            labelTitulo.AutoSize = true;
+            labelTitulo.Location = new Point(21, 9);
+            labelTitulo.Name = "labelTitulo";
+            labelTitulo.Size = new Size(109, 20);
+            labelTitulo.TabIndex = 2;
+            labelTitulo.Text = "Registrar Saída";
             // 
             // dataGridView1
             // 
@@ -79,7 +79,7 @@
             dataGridView1.Location = new Point(21, 94);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(509, 227);
+            dataGridView1.Size = new Size(622, 227);
             dataGridView1.TabIndex = 3;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -88,40 +88,40 @@
             Id.HeaderText = "ID";
             Id.MinimumWidth = 6;
             Id.Name = "Id";
-            Id.Width = 140;
+            Id.Width = 180;
             // 
             // placaCarro
             // 
             placaCarro.HeaderText = "Placa";
             placaCarro.MinimumWidth = 6;
             placaCarro.Name = "placaCarro";
-            placaCarro.Width = 150;
+            placaCarro.Width = 190;
             // 
             // dataEntrada
             // 
             dataEntrada.HeaderText = "Horário de entrada";
             dataEntrada.MinimumWidth = 6;
             dataEntrada.Name = "dataEntrada";
-            dataEntrada.Width = 166;
+            dataEntrada.Width = 200;
             // 
-            // label2
+            // labelSelecioneCarro
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(21, 62);
-            label2.Name = "label2";
-            label2.Size = new Size(273, 20);
-            label2.TabIndex = 4;
-            label2.Text = "Selecione o carro para registrar a Saída:";
-            label2.Click += label2_Click;
+            labelSelecioneCarro.AutoSize = true;
+            labelSelecioneCarro.Location = new Point(21, 62);
+            labelSelecioneCarro.Name = "labelSelecioneCarro";
+            labelSelecioneCarro.Size = new Size(273, 20);
+            labelSelecioneCarro.TabIndex = 4;
+            labelSelecioneCarro.Text = "Selecione o carro para registrar a Saída:";
+            labelSelecioneCarro.Click += label2_Click;
             // 
-            // label3
+            // labelInformeHoraSaida
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(23, 338);
-            label3.Name = "label3";
-            label3.Size = new Size(189, 20);
-            label3.TabIndex = 5;
-            label3.Text = "Informe o horário de saída:";
+            labelInformeHoraSaida.AutoSize = true;
+            labelInformeHoraSaida.Location = new Point(23, 338);
+            labelInformeHoraSaida.Name = "labelInformeHoraSaida";
+            labelInformeHoraSaida.Size = new Size(189, 20);
+            labelInformeHoraSaida.TabIndex = 5;
+            labelInformeHoraSaida.Text = "Informe o horário de saída:";
             // 
             // textBoxHorario
             // 
@@ -158,10 +158,10 @@
             Controls.Add(buttonHorarioArtual);
             Controls.Add(label4);
             Controls.Add(textBoxHorario);
-            Controls.Add(label3);
-            Controls.Add(label2);
+            Controls.Add(labelInformeHoraSaida);
+            Controls.Add(labelSelecioneCarro);
             Controls.Add(dataGridView1);
-            Controls.Add(label1);
+            Controls.Add(labelTitulo);
             Controls.Add(buttonConfirmar);
             Controls.Add(buttonCancelar);
             Name = "FormRegistrarSaida";
@@ -175,10 +175,10 @@
 
         private Button buttonCancelar;
         private Button buttonConfirmar;
-        private Label label1;
+        private Label labelTitulo;
         private DataGridView dataGridView1;
-        private Label label2;
-        private Label label3;
+        private Label labelSelecioneCarro;
+        private Label labelInformeHoraSaida;
         private TextBox textBoxHorario;
         private Label label4;
         private Button buttonHorarioArtual;

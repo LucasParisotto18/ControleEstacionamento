@@ -52,7 +52,7 @@ namespace GerenciaEstacionamento.View
 
 
             MessageBox.Show($"Entrada Adicionada!" +
-                $"\n\n  Placa do carro: {getPlacaCarro()}\n " +
+                $"\n\n Placa do carro: {getPlacaCarro()}\n " +
                 $"  Data de entrada: {getDataEntrada()}");
             this.DialogResult = DialogResult.OK;
             this.Close();

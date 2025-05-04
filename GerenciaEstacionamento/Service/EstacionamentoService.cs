@@ -1,4 +1,5 @@
-﻿using GerenciaEstacionamento.Model;
+﻿using GerenciaEstacionamento.Controller;
+using GerenciaEstacionamento.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,10 +12,10 @@ namespace GerenciaEstacionamento.Service
     {
         RegistroEstacionamento registroEstacionamento = new RegistroEstacionamento();
         TabelaPrecos tabelaPrecos = new TabelaPrecos();
+        List<TabelaPrecos> listaTabelaPrecos = new List<TabelaPrecos>();
 
 
-
-        public int getUltimoID(List<RegistroEstacionamento> listaRegistroEstacionamento)
+        public int getUltimoIDEstacionamento(List<RegistroEstacionamento> listaRegistroEstacionamento)
         {
             if (listaRegistroEstacionamento.Count == 0)
             {
@@ -23,15 +24,69 @@ namespace GerenciaEstacionamento.Service
             return listaRegistroEstacionamento.Last().getId();
         }
 
-        public TimeOnly calculartempoEstacionado(DateTime dataEntrada, DateTime dataSaida)
+        public int getUltimoIDPreco(List<TabelaPrecos> listaRegistroTabelaPrecos)
         {
-            TimeSpan tempo = dataSaida - dataEntrada;
-            return new TimeOnly(tempo.Ticks);
+            if (listaRegistroTabelaPrecos.Count == 0)
+            {
+                return 0;
+            }
+            return listaRegistroTabelaPrecos.Last().getId();
         }
 
-        public decimal calcularValorCobrado(TimeOnly tempoEstacionado, List<TabelaPrecos> listaTabelaPrecos)
+        public TimeSpan calculartempoEstacionado(DateTime dataEntrada, DateTime dataSaida)
         {
-            return 0;
+            TimeSpan tempo = dataSaida - dataEntrada;
+            return tempo;
+        }
+
+        public decimal calcularValorCobrado(RegistroEstacionamento registroEstacionamento, List<TabelaPrecos> listaTabelaPrecos)
+        {
+            int IDTabelaPreco = buscarIDTabelaPreco(listaTabelaPrecos, registroEstacionamento.getDataEntrada());
+            if (IDTabelaPreco == -1)
+            {
+                return -1;
+            }
+            decimal custoHoraInicial = listaTabelaPrecos[IDTabelaPreco].getCustoHoraInicial();
+            decimal custoHoraAdicional = listaTabelaPrecos[IDTabelaPreco].getCustoHoraAdicional();
+            TimeSpan tempoEstacionado = registroEstacionamento.getTempoEstacionado().Value;
+            decimal valorCobrado = 0;
+
+            if (tempoEstacionado.TotalMinutes <= 30)
+            {
+                valorCobrado = custoHoraInicial / 2;
+            } 
+            else
+            {
+                if (tempoEstacionado.TotalMinutes <= 70)
+                {
+                    valorCobrado = custoHoraInicial;
+                }
+                 else
+                    {
+                    int horasAdicionais = (int)((int)tempoEstacionado.TotalMinutes / 60) - 1;
+                    int restoDivisao = (int) tempoEstacionado.TotalMinutes % 60;
+                        if (restoDivisao > 10)
+                        {
+                        horasAdicionais++;
+                        }
+                    valorCobrado = custoHoraInicial + (horasAdicionais * custoHoraAdicional);
+
+                    }
+            }
+
+            return valorCobrado;
+        }
+
+        public int buscarIDTabelaPreco(List<TabelaPrecos> lstTabelaPreco, DateTime dataEntradaVeiculo)
+        {
+            for (int i = 0; i < lstTabelaPreco.Count; i++)
+            {
+                if (lstTabelaPreco[i].getDataInicioVigencia() <= dataEntradaVeiculo && lstTabelaPreco[i].getDataFinalVigencia() >= dataEntradaVeiculo)
+                {
+                    return i;
+                }
+            }
+            return -1;
         }
 
     }

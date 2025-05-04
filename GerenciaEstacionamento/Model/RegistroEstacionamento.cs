@@ -13,7 +13,7 @@ namespace GerenciaEstacionamento.Model
         private DateTime dataEntrada { get; set; } 
         private DateTime? dataSaida;
         private bool isEstacionado;
-        private TimeOnly? tempoEstacionado;
+        private TimeSpan? tempoEstacionado;
         private decimal? valorCobrado;
         private decimal? totalAPagar;
 
@@ -82,12 +82,12 @@ namespace GerenciaEstacionamento.Model
             return this.isEstacionado;
         }
 
-        public void setTempoEstacionado(TimeOnly? tempoEstacionado)
+        public void setTempoEstacionado(TimeSpan? tempoEstacionado)
         {
             this.tempoEstacionado = tempoEstacionado;
         }
 
-        public TimeOnly? getTempoEstacionado()
+        public TimeSpan? getTempoEstacionado()
         {
             return this.tempoEstacionado;
         }

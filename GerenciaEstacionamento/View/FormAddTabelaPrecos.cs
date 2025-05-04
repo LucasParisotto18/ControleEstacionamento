@@ -12,6 +12,14 @@ namespace GerenciaEstacionamento.View
 {
     public partial class FormAddTabelaPrecos : Form
     {
+        private DateTime dataInicioVigencia;
+        private DateTime dataFimVigencia;
+        private decimal valorHoraInicial;
+        private decimal valorHoraAdicional;
+
+
+
+
         public FormAddTabelaPrecos()
         {
             InitializeComponent();
@@ -39,7 +47,57 @@ namespace GerenciaEstacionamento.View
 
         private void buttonConfirmar_Click(object sender, EventArgs e)
         {
+            string formatoData = "dd/MM/yyyy HH:mm:ss";
+            setDataInicioVigencia(DateTime.Parse(textBoxInicioVigencia.Text));
+            setDataFimVigencia(DateTime.Parse(textBoxFimVigencia.Text));
+            setValorHoraInicial(decimal.Parse(textBoxCustoInicial.Text));
+            setValorHoraAdicional(decimal.Parse(textBoxCustoAdicional.Text));
 
+            MessageBox.Show($"Tabela Adicionada! \n\n" +
+                $"  Inicio Vigência: {getDataInicioVigencia()}\n" +
+                $"  Final Vigência: {getDataFimVigencia()} \n" +
+                $"  Valor Hora Inicial: {getValorHoraInicial()} \n" +
+                $"  Valor Hora Adicional: {getValorHoraAdicional()} \n");
+
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+
+        }
+
+
+
+        public DateTime getDataInicioVigencia()
+        {
+            return dataInicioVigencia;
+        }
+        public DateTime getDataFimVigencia()
+        {
+            return dataFimVigencia;
+        }
+        public decimal getValorHoraInicial()
+        {
+            return valorHoraInicial;
+        }
+        public decimal getValorHoraAdicional()
+        {
+            return valorHoraAdicional;
+        }
+
+        public void setDataInicioVigencia(DateTime dataInicioVigencia)
+        {
+            this.dataInicioVigencia = dataInicioVigencia;
+        }
+        public void setDataFimVigencia(DateTime dataFimVigencia)
+        {
+            this.dataFimVigencia = dataFimVigencia;
+        }
+        public void setValorHoraInicial(decimal valorHoraInicial)
+        {
+            this.valorHoraInicial = valorHoraInicial;
+        }
+        public void setValorHoraAdicional(decimal valorHoraAdicional)
+        {
+            this.valorHoraAdicional = valorHoraAdicional;
         }
     }
 }
