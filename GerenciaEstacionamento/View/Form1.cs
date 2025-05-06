@@ -27,7 +27,7 @@ namespace GerenciaEstacionamento
         {
             if (verificarCaminhoArqs().Equals(true))
             {
-                var formEntrada = new FormRegistrarEntrada();
+                var formEntrada = new FormRegistrarEntrada(listaTabelaPrecos);
                 if (formEntrada.ShowDialog() == DialogResult.OK)
                 {
                     int novoID = estacionamentoService.getUltimoIDEstacionamento(listaRegistroEstacionamento) + 1;

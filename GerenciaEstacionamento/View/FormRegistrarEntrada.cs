@@ -1,4 +1,6 @@
-﻿using System;
+﻿using GerenciaEstacionamento.Model;
+using GerenciaEstacionamento.Service;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,8 @@ namespace GerenciaEstacionamento.View
 
         private String placaCarro;
         private DateTime dataEntrada;
+        List<TabelaPrecos> listaTabelaPrecos = new List<TabelaPrecos>();
+        EstacionamentoService estacionamentoService = new EstacionamentoService();
 
         public String getPlacaCarro()
         {
@@ -36,26 +40,38 @@ namespace GerenciaEstacionamento.View
             this.dataEntrada = dataEntrada;
         }
 
-        public FormRegistrarEntrada()
+        public FormRegistrarEntrada(List<TabelaPrecos> listaTabelaPreco)
         {
             InitializeComponent();
+            this.listaTabelaPrecos = listaTabelaPreco;
         }
 
 
 
         private void button1_Click(object sender, EventArgs e)
         {
-            setPlacaCarro(textBoxPlaca.Text);
-
             string formatoDataHora = "dd/MM/yyyy HH:mm:ss";
-            setDataEntrada(DateTime.ParseExact(textBoxData.Text, formatoDataHora, System.Globalization.CultureInfo.InvariantCulture));
+            if (estacionamentoService.verificarDataEntradaTabelaPreco(listaTabelaPrecos, DateTime.ParseExact(textBoxData.Text, formatoDataHora, System.Globalization.CultureInfo.InvariantCulture)))
+            {
+                setPlacaCarro(textBoxPlaca.Text);
 
 
-            MessageBox.Show($"Entrada Adicionada!" +
-                $"\n\n Placa do carro: {getPlacaCarro()}\n " +
-                $" Data de entrada: {getDataEntrada()}");
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+                setDataEntrada(DateTime.ParseExact(textBoxData.Text, formatoDataHora, System.Globalization.CultureInfo.InvariantCulture));
+
+
+                MessageBox.Show($"Entrada Adicionada!" +
+                    $"\n\n Placa do carro: {getPlacaCarro()}\n " +
+                    $" Data de entrada: {getDataEntrada()}");
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            } else
+            {
+                MessageBox.Show($"Data de entrada não está dentro do intervalo da tabela de preços. \n" +
+                    $"Verifique a data de entrada ou adicione uma tabela de preços.");
+                
+            }
+
+            
         }
 
         private void label1_Click(object sender, EventArgs e)

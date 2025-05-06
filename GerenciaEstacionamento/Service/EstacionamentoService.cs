@@ -89,5 +89,21 @@ namespace GerenciaEstacionamento.Service
             return -1;
         }
 
+        public bool verificarDataEntradaTabelaPreco(List<TabelaPrecos> lstTabelaPreco, DateTime HorarioEntrada)
+        {
+            for (int i = 0; i < lstTabelaPreco.Count; i++)
+            {
+                if (lstTabelaPreco[i].getDataInicioVigencia() <= HorarioEntrada && lstTabelaPreco[i].getDataFinalVigencia() >= HorarioEntrada)
+                {
+                    return true;
+                }
+            }
+            return false;
+
+        }
+        
+
+        
+
     }
 }
